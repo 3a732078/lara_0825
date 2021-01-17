@@ -14,8 +14,13 @@ use App\Models\Post;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('list');
 
 
 });
+
+$post = Post::find(1);
+foreach($post->comments as $comment) {
+    echo $comment->content.'<br>';
+}
 
