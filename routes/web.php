@@ -17,8 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Post::create([
-
-    'title'=>"test title ",
-    'content'=>'test content '
-]);
+$p = new Post();
+$p->title = 'test title';
+$p->content = 'test content';
+$p->is_feature = 1;
+$p->save();
