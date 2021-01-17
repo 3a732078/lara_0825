@@ -16,8 +16,11 @@ use App\Models\Post;
 Route::get('/', function () {
     return view('welcome');
 
-    $fourthPost = Post::find(4);
-    dd($fourthPost);
-    $lastPost = Post::orderBy('id', 'DESC')‐>first();
-dd($lastPost);
+
 });
+
+
+$fourthPost = Post::find(4);
+dd($fourthPost);
+$lastPost = Post::orderBy('id', 'DESC')->first();
+dd($lastPost);
