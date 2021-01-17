@@ -22,3 +22,6 @@ $p ->title = 'update to title';
 $p ->content = 'update to content';
 $p ->is_feature = '1';
 $p->save();
+
+$p = Post::find(2);
+$p->delete();
