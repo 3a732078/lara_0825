@@ -15,12 +15,9 @@ use App\Models\Post;
 
 Route::get('/', function () {
     return view('welcome');
+
+    $allPosts = Post::all();
+    dd($allPosts);
+    $featuredPosts = Post::where('is_feature', 1)‐>get();
+    dd($featuredPosts);
 });
-
-$p = Post::find(1);
-$p ->title = 'update to title';
-$p ->content = 'update to content';
-$p ->is_feature = '1';
-$p->save();
-
-$p = Post::destroy(3,5,7);
